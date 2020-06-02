@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="logo-container">
+        <a [routerLink]="['/welcome']">
+            <img src="../../assets/images/white-apple-logo.png" alt="White Apple">
+        </a>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light nav-container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
+            (click)="isMenuCollapsed = !isMenuCollapsed">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" [ngbCollapse]="isMenuCollapsed">
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active-link" [routerLink]="['/products/iphone']"
+                        (click)="isMenuCollapsed = true">iPhone</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active-link" [routerLink]="['/products/macbook']"
+                        (click)="isMenuCollapsed = true">MacBook Pro</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active-link" [routerLink]="['/products/watch']"
+                        (click)="isMenuCollapsed = true">Watch</a>
+                </li>
+                <li class="nav-item">
+                    <a id="notifyMe" class="nav-link">Notify me</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

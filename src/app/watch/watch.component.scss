@@ -1,0 +1,167 @@
+@import "../../app/shared/styles/global-variables.scss";
+
+.text-wrapper {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f2f2f2+0,f9f9f9+52,fefefe+100 */
+    background: #f2f2f2; /* Old browsers */
+    background: -moz-linear-gradient(left, #f2f2f2 0%, #f9f9f9 52%, #fefefe 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #f2f2f2 0%, #f9f9f9 52%, #fefefe 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+        to right,
+        #f2f2f2 0%,
+        #f9f9f9 52%,
+        #fefefe 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#fefefe',GradientType=1 ); /* IE6-9 */
+    padding: 75px 0 75px 75px;
+}
+
+.heading-wrapper {
+    p {
+        color: $red-color;
+        font-size: 14px;
+    }
+}
+
+.image-wrapper {
+    height: 100%;
+    img {
+        position: absolute;
+        max-width: 60%;
+        top: 15%;
+        left: 10%;
+        opacity: 0.5;
+        visibility: hidden;
+        transition: all 0.3s ease-out;
+
+        &.show-img {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.bottom-wrapper {
+    min-height: 200px;
+}
+
+.price-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 75px;
+
+    p {
+        color: #cccccc;
+        font-size: 50px;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    a {
+        color: $red-color;
+        padding-left: 0;
+        font-weight: 600;
+        line-height: 0;
+    }
+}
+
+.form-check-inline {
+    margin: 0 40px;
+
+    label {
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+        margin-top: 45px;
+        font-size: 15px;
+
+        &::before {
+            content: " ";
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            border: 1px solid #e9ecef;
+            background-color: #ffffff;
+            position: absolute;
+            left: -4px;
+            top: -4px;
+        }
+
+        &::after {
+            content: " ";
+            height: 37px;
+            width: 37px;
+            border-radius: 50%;
+            position: absolute;
+            border: 1px solid #a1a1a1;
+            background-color: #ffffff;
+            left: 3px;
+            top: 3px;
+        }
+    }
+
+    .form-check-input:checked + label::before {
+        border: 1px solid $red-color;
+    }
+
+    #blackSelection + label::after {
+        background-color: #000000;
+    }
+}
+
+.toggle-wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    z-index: 99;
+    left: 30%;
+    bottom: -100px;
+
+    .form-check {
+        flex-direction: column;
+    }
+}
+
+/* Mobile */
+@media (max-width: $breakpoint-phone) {
+    .image-wrapper {
+        height: 200px;
+        img {
+            left: 20%;
+            top: 15px;
+        }
+    }
+
+    .toggle-wrapper {
+        position: initial;
+    }
+
+    .price-wrapper {
+        padding: 10px;
+        text-align: center;
+        p {
+            font-size: 25px;
+        }
+        a {
+            font-size: 18px;
+        }
+    }
+
+    .text-wrapper {
+        padding: 40px 20px;
+    }
+
+    .section-wrapper {
+        .bottom-wrapper {
+            min-height: auto;
+            width: 100%;
+            padding: 0 20px;
+        }
+        @media (orientation: Landscape) {
+            .text-wrapper,
+            .watch-wrapper {
+                width: 50%;
+            }
+        }
+    }
+}

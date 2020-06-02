@@ -1,0 +1,51 @@
+<div class="row blue-section">
+    <div class="col-lg-3 col-md-6 center-vert-align">
+        <div class="sign-content-box">
+            <h1>Sign-Up</h1>
+
+            <form [formGroup]="signUpForm" role="form" novalidate (ngSubmit)="signUp()">
+                <div class="form-group">
+                    <label for="fullName" class="form-control-label">Full Name</label>
+
+                    <input id="fullName" name="fullName" formControlName="fullName" type="text" class="form-control"
+                        placeholder="John Doe"
+                        [ngClass]="{'is-invalid': submitted && (signUpForm.get('fullName').errors?.required || signUpForm.get('fullName').errors?.pattern)}">
+                    <div [hidden]="!submitted">
+                        <small class="form-text text-danger" [hidden]="!signUpForm.get('fullName').errors?.pattern">
+                            Only letters are allowed.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-control-label">Email</label>
+
+                    <input id="email" name="email" formControlName="email" type="email" class="form-control"
+                        placeholder="user@email.com"
+                        [ngClass]="{'is-invalid': submitted && (signUpForm.get('email').errors?.required || signUpForm.get('email').errors?.pattern)}">
+                    <div [hidden]="!submitted">
+                        <small class="form-text text-danger" [hidden]="!signUpForm.get('email').errors?.pattern">
+                            Please enter a valid email.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-control-label">Password</label>
+
+                    <input id="password" name="password" formControlName="password" type="password" class="form-control"
+                        placeholder="*****************"
+                        [ngClass]="{'is-invalid': submitted && signUpForm.get('password').errors?.required}">
+                </div>
+
+                <div class="alert alert-danger" *ngIf="error">{{error}}</div>
+
+                <button type="submit" id="login" class="btn btn-dark rounded-0">Sign-Up </button>
+            </form>
+        </div>
+
+        <div class="sign-up-content text-left">
+            <span>Already registered? <a [routerLink]="['/']">Sign-in</a></span>
+        </div>
+    </div>
+</div>

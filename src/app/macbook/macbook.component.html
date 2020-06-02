@@ -1,0 +1,73 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="row no-gutters section-wrapper">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-5 text-wrapper ">
+                <div class="row">
+                    <div class="col-md-12 macbook-wrapper">
+                        <p @slideInLeft *ngIf="loaded">MacBook Pro</p>
+                        <p @slideInLeft *ngIf="loaded">Starts shipping {{shippingDate}}</p>
+                        <h1 @slideInLeft *ngIf="loaded">More power. <br> More pro</h1>
+
+                        <div class="row" @slideInRight *ngIf="loaded">
+                            <div class="col-md-5 no-padding">
+                                <p>8-core</p>
+                                <p>Intel processor</p>
+                            </div>
+                            <div class="col-md-7 no-padding">
+                                <p>32GB</p>
+                                <p>Memory</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-7 no-padding image-front">
+                <div class="image-wrapper">
+                    <picture>
+                        <source media="(min-width:650px)" srcset="../../assets/images/shutterstock.png">
+                        <img src="../../assets/images/shutterstock.png" alt="MacBook Pro">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-icons-wrapper no-mobile">
+        <app-product-nav-icons [direction]="'column'" class="home-product-icons"></app-product-nav-icons>
+    </div>
+</div>
+
+<div class="row no-gutters section-wrapper">
+    <div class="col-md-12 bottom-section" @slideUp *ngIf="loaded">
+        <div class="row">
+            <div class="col-md-2">
+                <a class="nav-link" [routerLink]="['/products/macbook']">Buy Now ></a>
+            </div>
+
+            <div class="col-md-4 no-padding">
+                <picture>
+                    <img src="../../assets/images/black-white-desk.png" alt="Apple Desk">
+                </picture>
+            </div>
+
+            <div class="col-md-6 subscribe-wrapper no-padding">
+                <form>
+                    <div class="form-group">
+                        <label for="email" class="form-control-label">Subscribe Now</label>
+
+                        <div class="input-group mb-3 subscribe">
+                            <input type="text" class="form-control" placeholder="Enter the email address"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-dark" type="button">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

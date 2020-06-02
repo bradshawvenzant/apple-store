@@ -1,0 +1,60 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="row no-gutters section-wrapper">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-8 text-wrapper">
+                <div class="row">
+                    <div class="col-md-12 iphone-content">
+                        <h1><strong>iPhone</strong>The ultimate <br> iPhone</h1>
+                        <h3>The future is here. Join de iPhone Upgrade <br> Program to get the latest iPhone - NOW!</h3>
+                        <h5>Starts shipping {{shippingDate}}</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 image-wrapper">
+                <picture>
+                    <img src="../../assets/images/iphone.png" alt="Iphone XS Gold Front Large"
+                        [ngStyle]="{opacity: 1 - rangeValue / 100, transform: 'translateX(' + (rangeValue) + '%)'}" />
+                </picture>
+                <picture>
+                    <img src="../../assets/images/apple-iphonexs-max-gold-back-small.png"
+                        alt="Iphone XS Gold Back Large"
+                        [ngStyle]="{opacity: 0 + rangeValue / 100, transform:'translateX(' + (100 - (rangeValue)) + '%)'}" />
+                </picture>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-icons-wrapper no-mobile">
+        <app-product-nav-icons [direction]="'column'" class="home-product-icons"></app-product-nav-icons>
+    </div>
+</div>
+<div class="row no-gutters section-wrapper mb-5">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-4 price-wrapper">
+                <p>From $699</p>
+                <a class="nav-link" [routerLink]="['/products/iphone']">Buy Now ></a>
+            </div>
+            <div class="col-md-8 slide-wrapper">
+                <picture>
+                    <img src="../../assets/images/apple-iphonexs-max-gold.png" alt="Iphone XS Gold Front"
+                        [ngStyle]="{ opacity: 1 - (rangeValue / 100 * 0.8) }" (click)="updateScrollValue(0)">
+                </picture>
+                <picture>
+                    <img src="../../assets/images/apple-iphonexs-max-gold-back.png" alt="Iphone XS Gold Back"
+                        [ngStyle]="{ opacity: 0.2 + (rangeValue / 100 * 0.8) }" (click)="updateScrollValue(100)">
+                </picture>
+                <div>
+                    <form role="form" novalidate #rangeForm='ngForm'>
+                        <input name='rangeValue' [(ngModel)]="rangeValue" type="range" min="1" max="100" value=0
+                            class="slider" (click)='updateValue()'>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+@import "../../styles/global-variables.scss";
+
+.nav-icons-container {
+    &.direction-column {
+        flex-direction: column;
+    }
+    div {
+        margin: 20px;
+    }
+
+    path {
+        fill: #cccccc;
+    }
+
+    .icon-container {
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    svg {
+        transition: all 0.2s ease-in-out;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+
+        &:hover {
+            // box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+    }
+}
+
+
+
+

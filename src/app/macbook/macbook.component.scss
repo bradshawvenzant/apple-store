@@ -1,0 +1,184 @@
+@import "../../app/shared/styles/global-variables.scss";
+
+.text-wrapper {
+    background-color: #000000;
+    padding: 75px 0 75px 75px;
+}
+
+.macbook-wrapper {
+    & > p:nth-child(1) {
+        color: $blue-color;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    & > p:nth-child(2) {
+        color: $red-color;
+        font-size: 14px;
+    }
+
+    h1 {
+        color: #ffffff;
+    }
+
+    .row p:nth-child(1) {
+        font-weight: bold;
+        font-size: 50px;
+        color: #5a5a5a;
+        margin-top: 60px;
+        margin-bottom: 0;
+        line-height: 1;
+    }
+}
+
+.image-front {
+    background-color: #000000;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,0c0f10+13,0c0f10+13,17252e+40,17252e+63,0c0f10+90,000000+100&1+0,0.63+23,0.63+23,0.4+40,0.4+60,0.63+80,1+100 */
+        background: -moz-linear-gradient(
+            left,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(12, 15, 16, 0.79) 13%,
+            rgba(16, 23, 27, 0.63) 23%,
+            rgba(23, 37, 46, 0.4) 40%,
+            rgba(23, 37, 46, 0.4) 60%,
+            rgba(23, 37, 46, 0.43) 63%,
+            rgba(16, 23, 27, 0.63) 80%,
+            rgba(12, 15, 16, 0.82) 90%,
+            rgba(0, 0, 0, 1) 100%
+        ); /* FF3.6-15 */
+        background: -webkit-linear-gradient(
+            left,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(12, 15, 16, 0.79) 13%,
+            rgba(16, 23, 27, 0.63) 23%,
+            rgba(23, 37, 46, 0.4) 40%,
+            rgba(23, 37, 46, 0.4) 60%,
+            rgba(23, 37, 46, 0.43) 63%,
+            rgba(16, 23, 27, 0.63) 80%,
+            rgba(12, 15, 16, 0.82) 90%,
+            rgba(0, 0, 0, 1) 100%
+        ); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(12, 15, 16, 0.79) 13%,
+            rgba(16, 23, 27, 0.63) 23%,
+            rgba(23, 37, 46, 0.4) 40%,
+            rgba(23, 37, 46, 0.4) 60%,
+            rgba(23, 37, 46, 0.43) 63%,
+            rgba(16, 23, 27, 0.63) 80%,
+            rgba(12, 15, 16, 0.82) 90%,
+            rgba(0, 0, 0, 1) 100%
+        ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+    }
+}
+
+.image-wrapper {
+    position: relative;
+    // background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(../../assets/images/shutterstock.png);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+
+    img {
+        width: 100%;
+    }
+
+
+}
+
+.section-wrapper {
+    min-height: 300px;
+}
+
+.bottom-section {
+    .nav-link {
+        display: flex;
+        justify-content: center;
+        margin-top: 90px;
+        margin-bottom: 60px;
+        padding: 0;
+        color: $blue-color;
+        font-weight: 600;
+    }
+
+    img {
+        clip-path: inset(90px 0 0);
+        width: 100%;
+    }
+
+    .subscribe-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f2f2f2;
+        margin-top: -30px;
+        margin-bottom: 90px;
+
+        form {
+            width: 70%;
+        }
+
+        .form-control-label {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            color: #000000;
+        }
+    }
+
+    .subscribe {
+        input {
+            margin-right: 15px;
+            border: 0;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-phone) {
+    .text-wrapper {
+        padding: 20px 5px;
+        text-align: center;
+    }
+
+    .macbook-wrapper {
+        .row p:nth-child(1) {
+            margin-top: 15px;
+            font-size: 25px;
+        }
+    }
+
+    .bottom-section {
+        .nav-link {
+            margin: 15px;
+        }
+        img {
+            clip-path: initial;
+        }
+        .subscribe-wrapper{
+            margin-bottom: 0;
+            form {
+                width: 100%;
+                padding: 5px;
+            }
+            .form-control-label {
+                font-size: 25px;
+                margin: 10px 0;
+            }
+            .input-group {
+                text-align: center;
+                input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

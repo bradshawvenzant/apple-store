@@ -1,0 +1,150 @@
+@import "app/shared/styles/global-variables.scss";
+
+body {
+    font-family: $primary-font;
+    color: $primary-font-color;
+    font-size: $primary-font-size;
+    overflow-x: hidden;
+
+    h1 {
+        color: #000000;
+        font-size: 100px;
+        font-size: 5vw;
+        font-weight: bold;
+        line-height: 1.2;
+        font-family: $primary-font;
+
+        strong {
+            display: block;
+            color: $red-color;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    h3 {
+        font-size: 24px;
+        margin-top: 30px;
+        font-weight: 400;
+    }
+
+    h5 {
+        color: $red-color;
+        font-size: 15px;
+        padding-top: 20px;
+        font-weight: 400;
+    }
+}
+
+input.form-control {
+    padding: 25px 30px;
+    border-radius: 0;
+    margin: 0;
+
+    &::placeholder {
+        color: #d4d4d4;
+        font-size: $placeholder-font-size;
+    }
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.h-100vp {
+    height: 100vh;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.flex-center-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-wrapper {
+    margin-left: 90px;
+}
+
+.btn-dark {
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    border-radius: 0;
+    padding: 13px 50px;
+    font-weight: 500;
+}
+
+.alert-danger {
+    font-size: 15px;
+    text-align: left;
+    border-radius: 0;
+    text-align: center;
+}
+
+.blue-section {
+    height: 100vh;
+    background: #87d7fb; /* Old browsers */
+    background: -moz-linear-gradient(top, #87d7fb 0%, #f1faff 59%, #feffff 82%, #ffffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+        top,
+        #87d7fb 0%,
+        #f1faff 59%,
+        #feffff 82%,
+        #ffffff 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+        to bottom,
+        #87d7fb 0%,
+        #f1faff 59%,
+        #feffff 82%,
+        #ffffff 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87d7fb', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.product-icons-wrapper {
+    position: absolute;
+    top: 40%;
+    right: 1%;
+}
+
+/* Responsive - Mobile */
+@media (max-width: $breakpoint-phone) {
+    body {
+        h1 {
+            font-size: 30px;
+        }
+        strong {
+            font-size: 20px;
+        }
+        h3 {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .no-mobile {
+            display: none;
+        }
+    }
+    .section-wrapper {
+        margin: 0;
+    }
+}
+
+@media (max-width: $breakpoint-small-desktop) {
+    body {
+        h1 {
+            font-size: 60px;
+            font-size: 3vw;
+        }
+    }
+}

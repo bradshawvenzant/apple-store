@@ -1,0 +1,82 @@
+@import "../shared/styles/global-variables.scss";
+
+.home-wrapper {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f2f2f2+0,f9f9f9+50,fefefe+100 */
+    background: #f2f2f2; /* Old browsers */
+    background: -moz-linear-gradient(left, #f2f2f2 0%, #f9f9f9 50%, #fefefe 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #f2f2f2 0%, #f9f9f9 50%, #fefefe 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+        to right,
+        #f2f2f2 0%,
+        #f9f9f9 50%,
+        #fefefe 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#fefefe',GradientType=1 ); /* IE6-9 */
+    height: calc(100vh - 100px);
+
+    &,
+    .text-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 2;
+    }
+
+    h1 {
+        font-size: 80px;
+        font-weight: bold;
+        color: #000000;
+        margin-top: 140px;
+    }
+
+    a {
+        color: $blue-color;
+        margin-top: 100px;
+        font-weight: 500;
+    }
+
+    img {
+        position: absolute;
+        width: 280px;
+        z-index: -1;
+        top: 0;
+        opacity: 0.12;
+    }
+}
+
+.home-product-icons {
+    margin-top: 100px;
+}
+
+/* Mobile */
+@media (max-width: $breakpoint-phone) {
+    .home-wrapper {
+        height: calc(100vh - 55px);
+        h1 {
+            font-size: 30px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        a {
+            margin-top: 40px;
+        }
+
+        img {
+            width: 50%;
+        }
+    }
+
+    @media (orientation: Landscape) {
+        .home-wrapper {
+            img {
+                width: 40vh;
+            }
+            .home-product-icons{
+                margin: 0;
+            }
+        }
+    }
+}

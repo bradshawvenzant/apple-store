@@ -1,0 +1,81 @@
+@import "global-variables.scss";
+
+.center-vert-align {
+    margin: auto;
+    text-align: center;
+}
+
+.sign-content-box {
+    background-color: #ffffff;
+    padding: 80px 50px;
+    -webkit-box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    margin-bottom: 15px;
+
+    button {
+        margin-top: 10px;
+    }
+
+    h1 {
+        padding-bottom: 30px;
+        font-size: 28px;
+    }
+
+    label {
+        text-align: left;
+        display: block;
+        color: #000000;
+        font-size: $label-font-size;
+        font-weight: 500;
+    }
+}
+
+.sign-up-content {
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000;
+
+    span {
+        display: block;
+
+        a {
+            color: $blue-color;
+        }
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .sign-content-box {
+        padding: 25px 30px;
+        h1 {
+            font-size: 25px;
+        }
+        .form-group {
+            label {
+                font-size: 14px;
+            }
+            input {
+                padding: 5px 15px;
+            }
+        }
+        .btn-dark {
+            padding: 10px 50px;
+            font-size: 15px;
+        }
+    }
+
+    @media (orientation: Landscape) {
+        .sign-content-box {
+            padding: 10px 25px;
+            h1 {
+                padding: 10px;
+                margin: 0;
+            }
+            .form-group {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

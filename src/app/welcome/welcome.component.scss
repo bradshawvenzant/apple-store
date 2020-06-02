@@ -1,0 +1,78 @@
+@import "../shared/styles/global-variables.scss";
+
+.welcome-header {
+    background-color: #000000;
+    height: 100px;
+    margin-bottom: 10px;
+
+    img {
+        width: 45px;
+    }
+}
+
+.welcome-wrapper {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.blue-section {
+    height: calc(100vh - 110px);
+    cursor: pointer;
+
+    .welcome-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 2;
+
+        h4 {
+            color: #000000;
+            font-size: 26px;
+            margin: 0;
+        }
+
+        img {
+            position: absolute;
+            width: 360px;
+            z-index: -1;
+        }
+    }
+}
+
+.odometer-wrapper {
+    position: absolute;
+    bottom: 100px;
+    color: #000000;
+    font-size: 70px;
+    letter-spacing: 30px;
+    font-weight: 700;
+}
+
+/* Mobile */
+@media (max-width: $breakpoint-phone) {
+    .welcome-header {
+        height: 75px;
+    }
+    .blue-section {
+        .welcome-container {
+            h4 {
+                font-size: 18px;
+                text-align: center;
+            }
+            img {
+                width: 50vh;
+            }
+            .odometer-wrapper {
+                font-size: 50px;
+            }
+        }
+    }
+
+    @media (orientation: Landscape) {
+        .odometer-wrapper {
+            bottom: 5vh;
+        }
+    }
+}

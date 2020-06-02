@@ -1,0 +1,15 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="row no-gutters section-wrapper">
+    <div class="col-md-12 home-wrapper h-100vp">
+        <div class="text-wrapper">
+            <h1 @slideInTop>Welcome to Apple</h1>
+
+            <a class="nav-link" [routerLink]="['/products/iphone']" @slideInBottom>See our Products</a>
+            
+            <img src="../../assets/images/gray-apple.png" alt="Gray Apple">
+
+            <app-product-nav-icons [direction]="'row'" class="home-product-icons" @zoomIn></app-product-nav-icons>
+        </div>
+    </div>
+</div>

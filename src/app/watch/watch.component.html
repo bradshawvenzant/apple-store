@@ -1,0 +1,54 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="row no-gutters section-wrapper">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6 text-wrapper">
+                <div class="row">
+                    <div class="col-md-12 heading-wrapper no-padding">
+                        <h1><strong>Apple Watch</strong>
+                            Change starts <br> within.</h1>
+                        <h3>Apple Watch Series 4. Fundamentally redesigned and <br> re-engineered to help you be even
+                            more active, <br> healthy, and connected.</h3>
+                        <h5>Starts shipping {{shippingDate}}</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 watch-wrapper">
+                <div class="image-wrapper">
+                    <picture>
+                        <img src="../../assets/images/black-watch.png" alt="Black Apple Watch"
+                            [ngClass]="{'show-img': !showImage}">
+                    </picture>
+                    <picture>
+                        <img src="../../assets/images/white-watch.png" alt="White Apple Watch"
+                            [ngClass]="{'show-img': showImage}">
+                    </picture>
+                </div>
+                <div class="toggle-wrapper">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="whiteSelection" name="inlineRadioOptions"
+                            value="white" (change)="toggleImage($event)" checked>
+                        <label class="form-check-label" for="whiteSelection">White</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="blackSelection" name="inlineRadioOptions"
+                            value="black" (change)="toggleImage($event)">
+                        <label class="form-check-label" for="blackSelection">Black</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-icons-wrapper no-mobile">
+        <app-product-nav-icons [direction]="'column'" class="home-product-icons"></app-product-nav-icons>
+    </div>
+</div>
+<div class="row no-gutters section-wrapper bottom-wrapper">
+    <div class="col-md-12 price-wrapper">
+        <p>From $699</p>
+        <a class="nav-link" [routerLink]="['/products/watch']">Buy Now ></a>
+    </div>
+</div>

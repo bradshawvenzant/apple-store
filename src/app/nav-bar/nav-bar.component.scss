@@ -1,0 +1,99 @@
+@import "../shared/styles/global-variables.scss";
+
+a {
+    color: $secondary-font-color;
+}
+
+.logo-container {
+    background-color: #000000;
+    width: 90px;
+    height: 90px;
+
+    &,
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img {
+        width: 45%;
+    }
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: auto;
+    padding-right: 5%;
+
+    .navbar-collapse {
+        flex-grow: 0;
+    }
+
+    li {
+        margin-right: 30px;
+
+        a:hover,
+        .active-link {
+            color: #000000;
+        }
+        #notifyMe {
+            min-width: 150px;
+            border-radius: 40px;
+            background-color: $blue-color;
+            border-color: $blue-color;
+            font-size: $primary-font-size;
+            text-align: center;
+            color: #ffffff;
+            cursor: pointer;
+        }
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: $breakpoint-phone) {
+    .top-header {
+        height: 55px;
+        position: relative;
+        .logo-container {
+            width: 55px;
+        }
+        .nav-container {
+            position: initial;
+            width: 80%;
+            ul {
+                position: absolute;
+                background: #000000;
+                z-index: 99;
+                top: 55px;
+                left: 0;
+                padding: 15px;
+                li {
+                    display: block;
+                    width: 100%;
+                    margin: 0;
+                    &:not(:last-child) {
+                        border-bottom: 1px solid rgba(255,255,255,0.8);
+                    }
+                    a {
+                        font-size: 17px;
+                        color: #f5f5f7;
+                    }
+                    #notifyMe {
+                        min-width: auto;
+                        border-radius: initial;
+                        background-color: initial;
+                        border-color: initial;
+                        font-size: initial;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
