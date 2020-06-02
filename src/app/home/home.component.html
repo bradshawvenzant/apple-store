@@ -6,10 +6,14 @@
             <h1 @slideInTop>Welcome to Apple</h1>
 
             <a class="nav-link" [routerLink]="['/products/iphone']" @slideInBottom>See our Products</a>
-            
-            <img src="../../assets/images/gray-apple.png" alt="Gray Apple">
 
-            <app-product-nav-icons [direction]="'row'" class="home-product-icons" @zoomIn></app-product-nav-icons>
+            <img src="../../assets/images/gray-apple.png" alt="Gray Apple">
         </div>
+    </div>
+</div>
+
+<div class="flex-center-center">
+    <div class="product-icons-container" @zoomIn>
+        <app-product-nav-icons [direction]="'row'" class="home-product-icons" ></app-product-nav-icons>
     </div>
 </div>

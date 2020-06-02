@@ -19,11 +19,13 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    data: { animation: 'signIn' }
   },
   {
     path: 'sign-up',
-    component: SignUpComponent
+    component: SignUpComponent,
+    data: { animation: 'signUp' }
   },
   {
     path: 'welcome',

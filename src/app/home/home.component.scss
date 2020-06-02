@@ -25,10 +25,9 @@
     }
 
     h1 {
-        font-size: 80px;
+        font-size: 60px;
         font-weight: bold;
         color: #000000;
-        margin-top: 140px;
     }
 
     a {
@@ -39,15 +38,29 @@
 
     img {
         position: absolute;
-        width: 280px;
+        width: 230px;
         z-index: -1;
         top: 0;
         opacity: 0.12;
     }
+
+    .text-wrapper {
+        padding-top: 140px;
+    }
 }
 
-.home-product-icons {
-    margin-top: 100px;
+.product-icons-container {
+    position: absolute;
+    z-index: 2;
+    bottom: 50px;
+
+    .home-product-icons {
+        margin-top: 100px;
+    }
+}
+
+.section-wrapper {
+    margin-right: 90px;
 }
 
 /* Mobile */

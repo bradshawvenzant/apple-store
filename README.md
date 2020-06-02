@@ -11,6 +11,8 @@ AppleStore is a project about an online store where the user can see the latest 
 
 After the user is authenticated the application will redirect to the welcome page and from this point the user can navigate to the home page. Once in the home page the user will be able to access the different products available in the store.
 
+Project Demo: https://youtu.be/VoHODmqvdCg
+
 ## Login/Autentication
 
 When the sign up form is submitted, the user's information is persisted in a Map<email, User> that is defined in a service and available for the application.

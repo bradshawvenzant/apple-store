@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" @topHeader>
     <div class="col-md-12 welcome-header flex-center-center">
         <a [routerLink]="['/home']">
             <picture>
@@ -9,17 +9,19 @@
 </div>
 
 <div class="row no-gutters">
-    <div class="col-md-12 welcome-wrapper">
+    <div class="col-md-12 welcome-wrapper" @welcomeWrapper>
         <div class="row blue-section" (click)="goToHome()">
             <div class="col-md-12 welcome-container">
-                <h4>New Products Coming This Summer</h4>
+                <h4 @welcomelabel>New Products Coming This Summer</h4>
 
-                <div class="odometer-wrapper">
-                    <ng2-odometer [number]="year" [config]="odometerConfig"></ng2-odometer>
-                </div>
-
-                <img src="../../assets/images/white-apple-logo.png">
+                <img src="../../assets/images/white-apple-logo.png" @welcomeApple>
             </div>
         </div>
+    </div>
+</div>
+
+<div class="flex-center-center">
+    <div class="odometer-wrapper">
+        <ng2-odometer [number]="year" [config]="odometerConfig"></ng2-odometer>
     </div>
 </div>

@@ -54,16 +54,23 @@
             </div>
 
             <div class="col-md-6 subscribe-wrapper no-padding">
-                <form>
+                <form [formGroup]="subscribeForm" role="form" novalidate autocomplete="off">
                     <div class="form-group">
                         <label for="email" class="form-control-label">Subscribe Now</label>
 
                         <div class="input-group mb-3 subscribe">
                             <input type="text" class="form-control" placeholder="Enter the email address"
-                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                aria-label="Recipient's username" aria-describedby="basic-addon2"
+                                formControlName="email"
+                                [ngClass]="{'is-invalid': submitted && (subscribeForm.get('email').errors?.required || subscribeForm.get('email').errors?.pattern)}">
                             <div class="input-group-append">
-                                <button class="btn btn-dark" type="button">Subscribe</button>
+                                <button class="btn btn-dark" type="submit" (click)="subscribeNow()">Subscribe</button>
                             </div>
+                        </div>
+                        <div [hidden]="!submitted">
+                            <small class="form-text text-danger" [hidden]="!subscribeForm.get('email').errors?.pattern">
+                                Please enter a valid email.
+                            </small>
                         </div>
                     </div>
                 </form>
