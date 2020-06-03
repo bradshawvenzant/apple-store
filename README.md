@@ -13,7 +13,7 @@ After the user is authenticated the application will redirect to the welcome pag
 
 Project Demo: https://youtu.be/VoHODmqvdCg
 
-## Login/Autentication
+## Login/Authentication
 
 When the sign up form is submitted, the user's information is persisted in a Map<email, User> that is defined in a service and available for the application.
 
@@ -29,7 +29,7 @@ password: admin
 
 Following the design, the user can navigate between different products using the top navigation menu or product icon bar (common component) displayed either in the right or bottom of the page.
 
-Non authenticated routes are protected with a guard, activating the route only if the user is authenticated, verifiying is there is a valid authentication token in the Session Storage. 
+Non authenticated routes are protected with a guard, activating the route only if the user is authenticated, verifying is there is a valid authentication token in the Session Storage. 
 
 Non authenticated routes: Redirect to login page.
 
@@ -39,7 +39,7 @@ Routing to /products route will trigger a resolver to get the shipping dates for
 
 ## Validations
 
-The signIn and signUp forms both are created using reactive form and both have validations for each field.
+The sign in and sign up forms both are created using reactive form and both have validations for each field.
 
 Regular Expressions were used to validate the full name as well as the email entered by the user during the sign up process:
 
@@ -50,7 +50,7 @@ All fields are required.
 
 ## Animations
 
-Angular Animations Module was used for the transitions and animations accross the application for route and components animations.
+Angular Animations Module was used for the transitions and animations across the application for route and components animations.
 
 ## Images
 
@@ -59,7 +59,7 @@ The icons for the product icon bar were designed using Adobe Photoshop.
 
 ## Dependencies
 
-In order to match the provided design and extend the angular capabilities the application uses the following third party libraries:
+In order to match the provided design and extend the angular capabilities the application uses the following third-party libraries:
 
 ng-bootstrap
 Ng-Bootstrap contains a set of native Angular directives based on Bootstrap’s markup and CSS.
